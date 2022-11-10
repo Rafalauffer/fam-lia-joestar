@@ -1,15 +1,20 @@
-var jojos=["joestars.jpg","george jonathan.png","jonathan.png","erina.jpg",
-"george joseph.png","Lisa Lisa.jpg","joseph.png","Suzi Q.jpg","Holy kujo.png","jotaro.jpg",
-"josuke.png","shizuka.png","mãejolyne.webp","jolyne.jpg"];
+var jojos=["a1.jpg","a2.png","a3.png","a4.jpg",
+"a5.png","a6.jpg","a7.png","a8.jpg","a9.png","a10.jpg",
+"a11.png","a12.png","a13.webp","a14.jpg"];
 var nomes=["Família Joestar","George Joestar","Jonathan Joestar","Erina Pendleton","George Joestar","Lisa Lisa(Elizabeth Joestar)",
 "Joseph Joestar","Suzi Q","Holy Kujo","Jotaro Kujo",
 "Josuke Higashikata","Shizuka","Mãe da Jolyne","Jolyne Cujoh"];
 var i = 0;
-function click() {
-    document.getElementById("joestars").src = jojos[i];
-document.getElementById("familia").innerHTML = nomes[i];
+
+function update() {
     i++;
-if (i==14) {
-    i=0;
-}
+    var numbersOfFamilyMemberInArray = 14
+        if(i > numbersOfFamilyMemberInArray)
+    {
+        i = 0;
+    }
+    var updatedImage = jojos[i];
+    var updatedName = nomes[i];
+    document.getElementById("joestars").src = updatedImage;
+    document.getElementById("familia").innerHTML = updatedName;
 }
